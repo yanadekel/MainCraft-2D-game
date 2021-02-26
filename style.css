@@ -7,11 +7,10 @@
 #game {
   width: 100vw;
   height: 100vh;
-
 }
 
 #inventory {
-  height:15%;
+  height: 15%;
   width: 100%;
   /* margin-bottom:3%; */
   background-color: antiquewhite;
@@ -22,16 +21,14 @@
 .tiles-container {
   height: 100%;
   width: 30%;
-
 }
 
 .top4-tiles, .bottom4-tiles {
-  width:100%;
+  width: 100%;
   height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .tile {
@@ -42,7 +39,7 @@
 
 .tools-container {
   height: 100%;
-  width:70% ;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,52 +48,88 @@
 .tool-box {
   height: 60px;
   width: 60px;
-  margin:10px;
+  margin: 10px;
 }
-
 
 #the-world {
   height: 75%;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(30,1fr);
-  grid-template-rows: repeat(25,1fr);
-  gap:0px 0px ;
+  grid-template-columns: repeat(25, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+  gap: 0px 0px;
 }
 
 #game-reset-container {
-  height:10%;
+  height: 10%;
   width: 100%;
   background-color: lightpink;
 }
 
 .box {
-  border:1px solid black;
+  border: 1px solid black;
   background-color: skyblue;
-
 }
 
-/* .sky-box {
-  background-color: skyblue;
-} */
-
-#ground-box {
- background-image: url(/MainCraft-2D-game/img/soil.jpg);
+.ground-box {
+  background-image: url(/MainCraft-2D-game/img/soil.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 
-#grass-box {
+.grass-box {
   background-image: url(/MainCraft-2D-game/img/grass.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
 }
 
-#Axe{
+.rock-box {
+  background-image: url(/MainCraft-2D-game/img/rock.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center; 
+}
+
+.leaves-box {
+  background-image: url(/MainCraft-2D-game/img/tree-leaves.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.cloud-box {
+  background-image: url(/MainCraft-2D-game/img/cloud.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.tree-box{
+  background-image: url(/MainCraft-2D-game/img/tree.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+#Axe {
   background-image: url(/MainCraft-2D-game/img/axe.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 
-#pickaxe {
+#Pickaxe {
   background-image: url(/MainCraft-2D-game/img/pickaxe.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 
-#shovel {
-  background-image: url(/MainCraft-2D-game/img/shovel.png);
+#Shovel {
+  background: url(/MainCraft-2D-game/img/shovel.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
-
