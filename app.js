@@ -97,21 +97,21 @@ worldMatrix();
 
 function changetile(evt) {
   // using tool or material
-console.log(evt.target.classList);
-  if (actionstate.using === 'tool') {
+  
+  if (actionstate.using === 'tool' && evt.target.className === actionstate.material) {
     // remove tile/material 
-    evt.target.classList.remove( actionstate.material);
+    evt.target.classList.remove(actionstate.material);
     evt.target.classList.add('box');
     counter[actionstate.material] += 1;
-
-
+    document.querySelector(`.${actionstate.material}`).textContent=  counter[actionstate.material];
+    
   }
-  else if (actionstate.using === 'material' && counter[actionstate.material]  > 0 && evt.target.className==="box" ) {
+  else if (actionstate.using === 'material' && counter[actionstate.material] > 0 && evt.target.className === "box") {
     // place tile or material
-    console.log('insert material ' +actionstate.using +", " + 'material'+", " + counter[actionstate.material])
     evt.target.classList.remove('box');
     evt.target.classList.add(actionstate.material);
-    counter[actionstate.material] -=1;
+    counter[actionstate.material] -= 1;
+    document.querySelector(`.${actionstate.material}`).textContent=  counter[actionstate.material];
   }
 }
 
@@ -124,9 +124,12 @@ function chooseTool(evnt) {
     actionstate.using = 'tool';
   };
 }
-let localMaterial;
+
+
+
+
 function chooseTile(evnt) {
-  localMaterial = evnt.target.classList[1];
+ let localMaterial = evnt.target.classList[1];
 
   if (actionstate.material === localMaterial && actionstate.using === 'material') {
     actionstate.using = '';
@@ -138,10 +141,6 @@ function chooseTile(evnt) {
     console.log('using ' + actionstate.using + localMaterial)
   }
 }
-
-// create mouse object with
-//      place to account for tool to use
-//      place to account for material to implement
 
 
 

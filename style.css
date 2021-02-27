@@ -9,11 +9,27 @@
   height: 100vh;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.btn {
+  text-decoration: none;
+  width: 100px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  box-shadow: 2px 6px 15px -2px #fff;
+  transition: all 1s ease-in-out;
+  text-decoration: none;
+}
+
 #inventory {
   height: 15%;
   width: 100%;
-  /* margin-bottom:3%; */
-  background-color: antiquewhite;
+  background-color:black;
   display: flex;
   justify-content: space-between;
 }
@@ -21,34 +37,42 @@
 .tiles-container {
   height: 100%;
   width: 30%;
+  display: inline;
 }
 
 .top4-tiles, .bottom4-tiles {
   width: 100%;
   height: 50%;
   display: flex;
+  justify-content:center;
   align-items: center;
-  justify-content: center;
+  color:black;
+  
+ 
 }
 
 .tile {
   height: 40px;
   width: 40px;
   margin: 5px;
+  display: inline;
 }
 
 .tools-container {
   height: 100%;
   width: 70%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content:flex-start;
 }
 
 .tool-box {
   height: 60px;
   width: 60px;
   margin: 10px;
+  text-decoration: none;
+  box-shadow: 2px 6px 15px -2px #fff;
+  transition: all 1s ease-in-out;
 }
 
 #the-world {
@@ -63,7 +87,7 @@
 #game-reset-container {
   height: 10%;
   width: 100%;
-  background-color: lightpink;
+  background-color:black;
 }
 
 .box {
@@ -75,7 +99,6 @@
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
-  color: red;
 }
 
 .grass-box {
@@ -88,7 +111,7 @@
   background-image: url(/MainCraft-2D-game/img/rock.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: center; 
+  background-position: center;
 }
 
 .leaves-box {
@@ -105,7 +128,7 @@
   background-position: center;
 }
 
-.tree-box{
+.tree-box {
   background-image: url(/MainCraft-2D-game/img/tree.png);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -131,4 +154,13 @@
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
+}
+
+
+#game-reset-container {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+ 
+
 }
