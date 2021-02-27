@@ -57,23 +57,23 @@ let toolMaterial = {
   'cloud-box': ''
 }
 
-let actionstate ={
+let actionstate = {
   tool: '',
   material: '',
   using: ''
 }
 
-// create object that holds for each class: its name, tool-type, inventory, ...;
-// use 
-let tileObj = new Map();;
-dicMaterial.map(el => (
-  tileObj.set(el, {
-    name: el,
-    inventory: 0,
-    // changeInvDisplay: inventory.onchange = function (el) { tile.getElementsByClassName(el).innerText = this.inventory; },
-    tool: toolMaterial[el],
-  })
-));
+let counter = {
+  'box': 0,
+  'ground-box': 0,
+  'grass-box': 0,
+  'tree-box': 0,
+  'leaves-box': 0,
+  'rock-box': 0,
+  'cloud-box': 0
+}
+
+
 
 // create main world div with internal cells of tiles using predefined drawnWorld
 function worldMatrix() {
@@ -96,13 +96,22 @@ worldMatrix();
 // create counter for each inventory
 
 function changetile(evt) {
-  // using tool or material 
+  // using tool or material
+console.log(evt.target.classList);
   if (actionstate.using === 'tool') {
-    evt.target.classList.remove(Object.keys(toolMaterial).find(key => toolMaterial[key] === actionstate.tool));
+    // remove tile/material 
+    evt.target.classList.remove( actionstate.material);
     evt.target.classList.add('box');
-  } 
-  else if (actionstate.using === 'material'){
+    counter[actionstate.material] += 1;
+
+
+  }
+  else if (actionstate.using === 'material' && counter[actionstate.material]  > 0 && evt.target.className==="box" ) {
+    // place tile or material
+    console.log('insert material ' +actionstate.using +", " + 'material'+", " + counter[actionstate.material])
+    evt.target.classList.remove('box');
     evt.target.classList.add(actionstate.material);
+    counter[actionstate.material] -=1;
   }
 }
 
@@ -115,17 +124,18 @@ function chooseTool(evnt) {
     actionstate.using = 'tool';
   };
 }
+let localMaterial;
+function chooseTile(evnt) {
+  localMaterial = evnt.target.classList[1];
 
-function chooseTile(evnt){
-  let localMaterial = evnt.target.classList[1];
-
-  if (actionstate.material === localMaterial && actionstate.using === 'material'){
+  if (actionstate.material === localMaterial && actionstate.using === 'material') {
     actionstate.using = '';
-  } else{
+    console.log('using ' + actionstate.using)
+  } else {
     actionstate.tool = toolMaterial[localMaterial];
-    actionstate.material =  localMaterial;
+    actionstate.material = localMaterial;
     actionstate.using = 'material';
-    console.log('using ' + localMaterial )
+    console.log('using ' + actionstate.using + localMaterial)
   }
 }
 
