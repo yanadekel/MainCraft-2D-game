@@ -5,6 +5,11 @@ let toolbutton = toolContainer.querySelectorAll('.tool-box');
 let Axe = document.querySelector('#Axe');
 let Pickaxe = document.querySelector('#Pickaxe');
 let Shovel = document.querySelector('#Shovel');
+let Hoe=document.querySelector('#Hoe');
+let sword=document.querySelector('#sword');
+let Stick=document.querySelector('#Stick');
+
+
 let tilesContainer = document.querySelector('.tiles-container');
 let tile = document.querySelector('.tile');
 let tileGround = document.querySelector('.ground-box')
@@ -45,16 +50,16 @@ const drawnWorld = [
   [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
 ]
-let dicMaterial = ['box', 'ground-box', 'grass-box', 'tree-box', 'leaves-box', 'rock-box', 'cloud-box']
+let dictionaryMaterial = ['box', 'ground-box', 'grass-box', 'tree-box', 'leaves-box', 'rock-box', 'cloud-box']
 
 let toolMaterial = {
   'box': '',
   'ground-box': 'Shovel',
-  'grass-box': 'Shovel',
+  'grass-box': 'Hoe',
   'tree-box': 'Axe',
-  'leaves-box': 'cutter',
+  'leaves-box': 'Stick',
   'rock-box': 'Pickaxe',
-  'cloud-box': ''
+  'cloud-box': 'sword'
 }
 
 let actionstate = {
@@ -82,7 +87,7 @@ function worldMatrix() {
     Wmatrix[col] = [];
     for (let row = 0; row < 25; row++) {
       let worldDiv = document.createElement('div');
-      worldDiv.classList.add(dicMaterial[drawnWorld[col][row]]);
+      worldDiv.classList.add(dictionaryMaterial[drawnWorld[col][row]]);
       worldDiv.id = `${col},${row}`;
       world.appendChild(worldDiv);
       worldObj.set(`${col},${row}`, { worldDiv })
@@ -93,25 +98,24 @@ function worldMatrix() {
 worldMatrix();
 
 
-// create counter for each inventory
 
 function changetile(evt) {
   // using tool or material
-  
+
   if (actionstate.using === 'tool' && evt.target.className === actionstate.material) {
     // remove tile/material 
     evt.target.classList.remove(actionstate.material);
     evt.target.classList.add('box');
     counter[actionstate.material] += 1;
-    document.querySelector(`.${actionstate.material}`).textContent=  counter[actionstate.material];
-    
+    document.querySelector(`.${actionstate.material}`).textContent = counter[actionstate.material];
+
   }
   else if (actionstate.using === 'material' && counter[actionstate.material] > 0 && evt.target.className === "box") {
     // place tile or material
     evt.target.classList.remove('box');
     evt.target.classList.add(actionstate.material);
     counter[actionstate.material] -= 1;
-    document.querySelector(`.${actionstate.material}`).textContent=  counter[actionstate.material];
+    document.querySelector(`.${actionstate.material}`).textContent = counter[actionstate.material];
   }
 }
 
@@ -129,16 +133,14 @@ function chooseTool(evnt) {
 
 
 function chooseTile(evnt) {
- let localMaterial = evnt.target.classList[1];
+  let localMaterial = evnt.target.classList[1];
 
   if (actionstate.material === localMaterial && actionstate.using === 'material') {
     actionstate.using = '';
-    console.log('using ' + actionstate.using)
   } else {
     actionstate.tool = toolMaterial[localMaterial];
     actionstate.material = localMaterial;
     actionstate.using = 'material';
-    console.log('using ' + actionstate.using + localMaterial)
   }
 }
 

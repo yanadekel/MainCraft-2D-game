@@ -136,25 +136,49 @@ a {
 }
 
 #Axe {
-  background-image: url(/MainCraft-2D-game/img/axe.png);
+  background-image: url(/MainCraft-2D-game/img/axa.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
 }
 
 #Pickaxe {
-  background-image: url(/MainCraft-2D-game/img/pickaxe.png);
+  background-image: url(/MainCraft-2D-game/img/Pickaxe1.jpg);
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center;
+}
+
+#Shovel {
+  background: url(/MainCraft-2D-game/img/shovel.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
 }
 
-#Shovel {
-  background: url(/MainCraft-2D-game/img/shovel.png);
+
+#Hoe {
+  background: url(/MainCraft-2D-game/img/hoe.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
 }
+
+#sword{
+  background: url(/MainCraft-2D-game/img/-bow-and-arrow-minecraft.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+
+#Stick{
+  background: url(/MainCraft-2D-game/img/stick.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
 
 
 #game-reset-container {
