@@ -19,7 +19,7 @@ body {
 }
 
 #logo {
-  background: url(/MainCraft-2D-game/img/logo.png)  no-repeat;
+  background: url(img/logo.png)  no-repeat;
   z-index: 10;
   width:70%;
   height:30%;
@@ -42,7 +42,7 @@ body {
 
 #showcase:before {
   content:"";
-  background: url(/MainCraft-2D-game/img/pmp-hero-minecraft.jpg) no-repeat center center/cover;
+  background: url(/img/pmp-hero-minecraft.jpg) no-repeat center center/cover;
   position: absolute;
   top:0;
   left:0;

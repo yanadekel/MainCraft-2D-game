@@ -95,62 +95,62 @@ a {
 }
 
 .ground-box {
-  background-image: url(/MainCraft-2D-game/img/soil.jpg);
+  background-image: url(/img/soil.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
 }
 
 .grass-box {
-  background-image: url(/MainCraft-2D-game/img/grass.png);
+  background-image: url(/img/grass.png);
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
 .rock-box {
-  background-image: url(/MainCraft-2D-game/img/rock.png);
+  background-image: url(/img/rock.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
 }
 
 .leaves-box {
-  background-image: url(/MainCraft-2D-game/img/tree-leaves.png);
+  background-image: url(/img/tree-leaves.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
 }
 
 .cloud-box {
-  background-image: url(/MainCraft-2D-game/img/cloud.png);
+  background-image: url(/img/cloud.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
 }
 
 .tree-box {
-  background-image: url(/MainCraft-2D-game/img/tree.png);
+  background-image: url(/img/tree.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
 }
 
 #Axe {
-  background-image: url(/MainCraft-2D-game/img/axa.jpg);
+  background-image: url(/img/axa.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
 }
 
 #Pickaxe {
-  background-image: url(/MainCraft-2D-game/img/Pickaxe1.jpg);
+  background-image: url(/img/Pickaxe1.jpg);
   background-repeat: no-repeat;
   background-size: 90%;
   background-position: center;
 }
 
 #Shovel {
-  background: url(/MainCraft-2D-game/img/shovel.jpg);
+  background: url(/img/shovel.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -158,14 +158,14 @@ a {
 
 
 #Hoe {
-  background: url(/MainCraft-2D-game/img/hoe.jpg);
+  background: url(/img/hoe.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
 }
 
 #sword{
-  background: url(/MainCraft-2D-game/img/-bow-and-arrow-minecraft.png);
+  background: url(/img/-bow-and-arrow-minecraft.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -173,7 +173,7 @@ a {
 
 
 #Stick{
-  background: url(/MainCraft-2D-game/img/stick.png);
+  background: url(/img/stick.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
