@@ -18,8 +18,8 @@ a {
 
 .btn {
   text-decoration: none;
-  width: 100px;
-  height: 40px;
+  width: 150px;
+  height: 60px;
   background-color: black;
   color: white;
   box-shadow: 2px 6px 15px -2px #fff;
@@ -31,7 +31,7 @@ a {
 
 
 #inventory {
-  height: 18%;
+  height: 16%;
   width: 100%;
   background-color:black;
   display: flex;
@@ -56,8 +56,8 @@ a {
 }
 
 .tile {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   margin: 5px;
   display: inline;
 }
@@ -71,8 +71,8 @@ a {
 }
 
 .tool-box {
-  height: 60px;
-  width: 60px;
+  height: 90px;
+  width: 90px;
   margin: 10px;
   text-decoration: none;
   box-shadow: 2px 6px 15px -2px #fff;
@@ -80,7 +80,7 @@ a {
 }
 
 #the-world {
-  height: 72%;
+  height: 74%;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(25, 1fr);
@@ -194,9 +194,9 @@ a {
 
 }
 
-@media screen and (max-height:580px) {
+@media screen and (max-height:800px) {
   #inventory {
-    height: 25%;
+    height: 20%;
   }
   #the-world {
     height: 65%;
