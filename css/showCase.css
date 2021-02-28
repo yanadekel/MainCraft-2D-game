@@ -104,7 +104,7 @@ body {
   }
 }
 
-@media screen and (max-height:790px) {
+/* @media screen and (max-height:790px) {
   #logo {
     background: url(/img/logo.png) no-repeat;
     z-index: 10;
@@ -123,4 +123,4 @@ body {
     z-index: 1;
   }
 
-}
+} */
