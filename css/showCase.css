@@ -1,14 +1,12 @@
 :root {
-  --primary-color:black;
-  --secondary-color:grey;
-  --overlay-color:rgba(24, 39,51,0.85);
-  --menu-speed:0.75s;
-
+  --primary-color: black;
+  --secondary-color: grey;
+  --overlay-color: rgba(24, 39, 51, 0.85);
+  --menu-speed: 0.75s;
 }
 
-
-*{
-  margin:0;
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -19,37 +17,35 @@ body {
 }
 
 #logo {
-  background: url(/img/logo.png)  no-repeat;
+  background: url(/img/logo.png) no-repeat;
   z-index: 10;
-  width:70%;
-  height:30%;
-  margin-left:50px;
-  
+  width: 70%;
+  height: 30%;
+  margin-left:70%;
 }
 
 .container {
-  max-width:960px;
-  margin:auto;
+  max-width: 960px;
+  margin: auto;
   overflow: hidden;
   padding: 0 3rem;
 }
 
-#showcase{
+#showcase {
   background: var(--primary-color);
   height: 100vh;
   position: relative;
 }
 
 #showcase:before {
-  content:"";
+  content: "";
   background: url(/img/pmp-hero-minecraft.jpg) no-repeat center center/cover;
   position: absolute;
-  top:0;
-  left:0;
-  width:100%;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
   z-index: 1;
- 
 }
 
 #showcase .showcase-container {
@@ -59,23 +55,22 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  height:75%;
+  height: 75%;
 }
 
 #showcase h1 {
   z-index: 10;
 }
 
-#showcase p{
+#showcase p {
   z-index: 10;
- 
 }
 
 .btn {
   display: inline-block;
-  border:none;
+  border: none;
   background-color: var(--primary-color);
-  color:#fff;
+  color: #fff;
   padding: 0.75rem 1.5rem;
   margin-top: 1rem;
   transition: all 1s ease-in-out;
@@ -85,3 +80,47 @@ body {
 
 
 
+#showcase::after {
+  content: "TUREN YOUR PHONE TO SIDE MODE";
+  color: blueviolet;
+  font-size:70px;
+  text-align: center;
+  background: url(/img/mediablock-buzzybees.jpg) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+   visibility: hidden;
+  z-index: 40;
+}
+
+
+@media screen and (max-width:700px) {
+ 
+
+  #showcase::after {
+    visibility: visible;
+  }
+}
+
+@media screen and (max-height:790px) {
+  #logo {
+    background: url(/img/logo.png) no-repeat;
+    z-index: 10;
+    width: 70%;
+    height: 30%;
+    margin-left: 50px;
+  }
+  #showcase:before {
+    content: "";
+    background: url(/img/pmp-hero-minecraft.jpg) no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+}
