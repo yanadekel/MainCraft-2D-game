@@ -4,7 +4,6 @@
   padding: 0;
 }
 
-
 #game {
   width: 100vw;
   height: 100vh;
@@ -15,7 +14,6 @@ a {
   color: #fff;
 }
 
-
 .btn {
   text-decoration: none;
   width: 150px;
@@ -25,15 +23,12 @@ a {
   box-shadow: 2px 6px 15px -2px #fff;
   transition: all 1s ease-in-out;
   text-decoration: none;
-  
 }
-
-
 
 #inventory {
   height: 16%;
   width: 100%;
-  background-color:black;
+  background-color: black;
   display: flex;
   justify-content: space-between;
 }
@@ -48,11 +43,12 @@ a {
   width: 100%;
   height: 50%;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
-  color:black;
-  
- 
+  color:brown;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
 }
 
 .tile {
@@ -67,7 +63,7 @@ a {
   width: 70%;
   display: flex;
   align-items: flex-start;
-  justify-content:flex-start;
+  justify-content: flex-start;
 }
 
 .tool-box {
@@ -77,6 +73,14 @@ a {
   text-decoration: none;
   box-shadow: 2px 6px 15px -2px #fff;
   transition: all 1s ease-in-out;
+  position: relative;
+}
+
+span {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 20px;
 }
 
 #the-world {
@@ -91,7 +95,7 @@ a {
 #game-reset-container {
   height: 10%;
   width: 100%;
-  background-color:black;
+  background-color: black;
 }
 
 .box {
@@ -160,7 +164,6 @@ a {
   background-position: center;
 }
 
-
 #Hoe {
   background: url(/img/hoe.jpg);
   background-repeat: no-repeat;
@@ -168,30 +171,24 @@ a {
   background-position: center;
 }
 
-#sword{
+#sword {
   background: url(/img/-bow-and-arrow-minecraft.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
 }
 
-
-#Stick{
+#Stick {
   background: url(/img/stick.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
 }
 
-
-
 #game-reset-container {
   justify-content: center;
   text-align: center;
   align-items: center;
-
- 
-
 }
 
 @media screen and (max-height:800px) {
@@ -202,5 +199,3 @@ a {
     height: 65%;
   }
 }
-
-
